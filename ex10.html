@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 만들어보기</title>
+</head>
+<body>
+    <table border="1">
+        <caption>표제목</caption>
+        <tr><td>1</td><td>2</td><td >3</td><td>4</td></tr>
+        <tr><td >5</td><td>6</td><td>7</td><td>8</td></tr>
+        <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+
+    </table>
+
+    <table border="1">
+        <caption>ex1</caption>
+        <tr><td>이름</td><td>나이</td></tr>
+        <tr><td>홍길동</td><td>21</td></tr>
+        <tr><td>홍길남</td><td>18</td></tr>
+        <tr><td>홍길수</td><td>33</td></tr>
+    </table>
+
+    <table border=1>
+        <caption>ex2</caption>
+        <tr><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td></tr>
+        <tr><td>미술</td><td>국어</td><td>화학</td><td>영어</td><td>기술</td></tr>
+        <tr><td>사회</td><td>체육</td><td>도덕</td><td>수학</td><td>영어</td></tr>
+    </table>
+    <table>
+        <caption>이미지테이블</caption>
+        <tr> <td><img src= "img/tabl1.jpg"></td> <td><img src= "img/tabl2.jpg"></td> </tr>
+        <tr> <td><img src= "img/tabl3.jpg"></td> <td><img src= "img/tabl4.jpg"></td> </tr>
+        <tr> <td><img src= "img/tabl5.jpg"></td> <td><img src= "img/tabl6.jpg"></td> </tr>
+
+    </table>
+
+    <p>상위의 속성표를 보고 왼쪽과 같은이미지를 만들어보자</p>
+    <table border=1>
+        <tr>
+            <td widhth ="60px"height ="60px">1</td><td>2</td><td>3</td><td>4</td>
+        </tr>
+        <tr>
+            <td bgcolor="yellow">5</td><td bgcolor="red">6</td><td bgcolor="yellow">7</td><td bgcolor="yellow">8</td>
+        </tr>
+        <tr>
+            <td>9</td><td>10</td><td>11</td><td>12</td>
+        </tr>
+    </table>
+    
+    <p>상위의 속성표를 보고 왼쪽과 같은이미지를 만들어보자</p>
+    <table border=1>
+        <tr>
+            <td colspan="2">1</td><td colspan="2">2</td>
+        </tr>
+        <tr>
+            <td>3</td><td>4</td><td>5</td><td rowspan="4">6</td >
+            </tr>
+        <tr>
+            <td>7</td><td colspan="2" rowspan="3">8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td >10</td>
+        </tr>
+        <tr>
+            <td colspan="4">11</td>
+        </tr>
+    </table>
+    <p>다음 테이블을 만들어보자</p>
+    <table border="1">
+        <tr>
+            <td colspan="2">컬럼1</td><td>컬럼2</td><td>컬럼3</td><td>컬럼4</td>
+        </tr>
+        <tr>
+            <td>데이터1</td><td>데이터2</td><td rowspan="2">데이터3</td><td rowspan="3">데이터4</td><td>데이터5</td>
+        </tr>
+        <tr>
+            <td>데이터1</td><td>데이터2</td><td>데이터3</td>
+        </tr>
+        <tr>
+            <td colspan="3">데이터1</td><td>데이터2</td>
+        </tr>
+    </table>
+
+</body>
+</html>
