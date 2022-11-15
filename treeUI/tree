@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tree</title>
+</head>
+<style type="text/css">
+      body { background-color: rgb(255, 255, 255);background-image : url("img/otot.jpg") ;  
+        background-repeat : repeat-x ; }
+     
+    </style>
+<body>
+    <center>
+    <h1 style="border: 0.5px;font: size 30px;color:rgb(255, 2, 230);font-family: 궁서체;background-size:0rem
+    ;background-color: rgba(24, 119, 64, 0.656);font">
+        숲속 탐험</h1>
+    <p >
+       
+         
+        
+            <a id="main"><img src="img/forest.jpg" width="350px"></a> 
+        
+        <br>
+      
+        
+      <form method="post" action="joinregister.html">
+          <input type="text" name="name1">님 안녕하세요 
+        </form>
+    </p>
+     <p><!--전체 select-->
+       <a href="treearray.html"> <button onclick="alert('이 나무들만 벌목 가능합니다.')">벌목 가이드</button></a>
+        </P>  
+
+     <p >
+        <form><!--부분 select-->
+            <Table style="font- size 30px;color:rgb(0, 0, 0);font-family:나눔고딕;background-color: rgb(210, 251, 6); 
+            border: 1px; border-color: black;">
+                <tr>
+                    <td>벌목할 나무
+                    <td>
+                    <label style="border: 2px;font: size 30px;color:rgb(254, 254, 254);"></label>
+                     <input id="tree1" type="radio" name="tree" value="a">
+                     <label for="Mango">망고</label>
+                     <input id="papaya" type="radio"name="tree" value="b">
+                     <lable for="papya">파파야</lable>
+                      <input id="banana" type="radio" name="tree" value="c">
+                     <lable for="banana">바나나</lable> 
+                     <input id="Lemon" type="radio" name="tree" value="d">
+                     <label for="Lemon">레몬</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <input type="submit" value="이동" >
+                       
+                    </td>
+                </tr>
+            </Table>
+            
+        </form>
+        <a href="tree1.html"><button onclick="alert(' 걸어갑니다.')">임시 이동</button></a><br>
+        
+        
+    
+
+    <a href="joinregister.html">회원가입</a>
+    <a href="unregister.html">회원탈퇴</a>
+    <a href="update.html">회원정보</a>
+
+</p>
+</center>
+</body>
+</html>
