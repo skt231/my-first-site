@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+
+  <title>Document</title>
+  <style>
+      body{background-image:url("img/Div구성자총각내야채가개/menu_back2.jpg");
+	       background-repeat:repeat-x;/*no-repeat; /*repeat-y;repeat-x;*/
+		   background-position: 0px 501px;
+	       margin:0px;
+	  }
+	  #mainDiv{
+	  position:absolute;left:50%;margin-left:-490px;
+           width:980px; height:1272px; background-color:#ffccff;
+	  }
+	  #top{
+	      width:980px; height:501px;
+		  }
+      #menu{width:980px; height:43px;}
+	  #content{width:980px; height:728px;}
+	  #m1{position:absolute; left:0px;top:544px;width:142px;height:144px;
+	      background-color:red;display:none;}
+
+      #m1 div{height:48px; }
+	  #menu1:hover ~#m1{
+	        display:block;
+	  }
+      #m1:hover{display:block;}
+	  /*#test{
+	  background-color:#ff6666;
+	  display:block}
+	  visibility:hidden;visible;*/
+	  }
+  </style>
+ </head>
+ <body>
+ <div id="mainDiv">
+  <div id="top">
+     <img src="img/Div구성자총각내야채가개/top.png"/>
+  </div>
+  <div id="menu">
+    <img src="img/Div구성자총각내야채가개/menu_1.jpg"/ id="menu1">
+ <img src="img/Div구성자총각내야채가개/menu_2.jpg">
+ <img src="img/Div구성자총각내야채가개/menu_3.jpg"">
+ <img src="img/Div구성자총각내야채가개/menu_4.jpg">
+ <img src="img/Div구성자총각내야채가개/menu_5.jpg"">
+ <img src="img/Div구성자총각내야채가개/menu_6.jpg">
+ <img src="img/Div구성자총각내야채가개/menu_7.jpg">
+	<div id="m1">
+	    <div><img src="img/Div구성자총각내야채가개/sub_1_1.jpg"></div>
+		<div><img src="img/Div구성자총각내야채가개/sub_1_2.jpg"></div>
+		<div><img src="img/Div구성자총각내야채가개/sub_1_3.jpg"></div>
+
+	</div>
+  
+  </div>
+  <div id="content">
+      <img src="img/Div구성자총각내야채가개/bottom.png"/>
+ </div>
+ </div>
+
+  
+ </body>
+</html>
