@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index속성ex</title>
+    <style>
+        div.sq1{
+            position: absolute;
+         border:solid 1px black;
+         background-color: yellow;
+         width: 150px;
+         height: 150px;   
+         left:45%;   
+         z-index: 2;
+        }
+        div.sq2{
+            position: absolute;
+         border:solid 1px black;
+         background-color: rgb(255, 0, 0);
+         width: 150px;
+         height: 150px;   
+         left:35%;   
+         top:14%;
+         z-index: 3;
+        }
+        div.sq3{
+            position: absolute;
+         border:solid 1px black;
+         background-color: rgb(0, 26, 255);
+         width: 150px;
+         height: 150px;   
+         left:45%;   
+         top:25%;
+         z-index: 4;
+        }
+        div.sq4{
+            position: absolute;
+         border:solid 1px black;
+         background-color: rgb(0, 255, 76);
+         width: 150px;
+         height: 150px;   
+         left:55%;   
+         top:14%;
+         z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="sq1"></div>
+    <div class="sq2"></div>
+    <div class="sq3"></div>
+    <div class="sq4"></div>
+</body>
+</html>

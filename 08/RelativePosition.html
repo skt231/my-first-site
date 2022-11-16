@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-weight: bold;
+        font-size: 12px;
+    }
+    p.sp{
+        position:static;
+        left: 30px; /*적용되지 않음*/
+        background-color:cyan;
+        width: 400px;
+        height: 50px;
+    }
+    div.rp1{
+        position: relative;
+        left:30px;
+        top: 10px;
+        width: 400px;
+        height: 50px;
+        background-color: orange;
+    }
+    p.rp2{
+        position:relative;
+        left: 60px;
+        top:10px;
+        width: 400px;
+        height: 50px;
+        background-color: green;
+    }
+
+</style>
+<body>
+    <h2>Positioning style2</h2>
+    <p class="sp">정적 위치 설정 적용</p>
+    <div class="rp1">상대 위치 설정 적용-left 30px - top 10px</div>
+    <p class="rp2">상대 위치 설정 적용 - left 60ox, top20px</p>
+</body>
+</html>
