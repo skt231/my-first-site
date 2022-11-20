@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        #wrap{
+            width: 980px;
+            margin:0px auto;
+        }
+        header{
+            height:80px;
+            background-color: rgb(199, 255, 17);
+        }
+        aside#left{
+            width: 200px;
+            height:300px;
+            float: left;
+            background-color: beige;
+        }
+        aside#right{
+            width:180px;
+            height:300px;
+            float: left;
+            background-color: beige;
+        }
+        main{
+            width: 600px;
+            height: 300px;
+            float: left;
+            background-color: blueviolet;
+        }
+        footer{
+            height: 80px;
+            clear:both;
+            background-color: rgb(200, 200, 132);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            헤더 컨텐츠
+        </header>
+        <aside id="left">
+            좌측 컨텐츠
+        </aside>
+        <main>
+            메인 컨텐츠
+        </main>
+        <aside id="right">
+            우측 컨텐츠
+        </aside>
+        <footer>
+            푸터 컨텐츠
+        </footer>
+    </div>
+</body>
+</html>
