@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #ffffff, #542ff8);   
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.screen {   
+  background: linear-gradient(90deg, #caff09, #03ff3a);   
+  position: relative; 
+  height: 600px;
+  width: 360px; 
+  box-shadow: 0px 0px 24px #1d04f8;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative; 
+  height: 100%;
+}
+        .screen__background {   
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);  
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #FFF; 
+  top: -50px;
+  right: 120px; 
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #d9ff00;  
+  top: -172px;
+  right: 0; 
+  border-radius: 32px;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #b700ff, #889b36);
+  top: -24px;
+  right: 0; 
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: #02a0fc;  
+  top: 420px;
+  right: 50px;  
+  border-radius: 60px;
+}
+.infor_field{
+    padding: 160px 0px;  
+  position: relative; 
+  ;
+}
+#checkout{
+  float: right;
+  margin-top: -22px;
+  margin-right: 70px;
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form class="update">
+            <div class="infor_field">
+                <h3>비밀번호 재설정</h3>
+            비밀번호 :  <input type="password" name="pwt1l" required maxlength="20"/><br />
+            <button id="checkout">중복확인</button>
+            비밀번호 확인: <input type="password" name="pwt2" required maxlength="20"/><br />
+                        
+                        <a href="login.html"><button onclick="alert('수정이 완료되었습니다.')">설정</button></a>
+                        <a href="login.html"> <input type="button" value="로그인 페이지로" alt="돌아가기 버튼"/></a>
+            </div>
+        </form>
+
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>    
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+        
+      </div >
+      
+    
+    </div>
+    
+        </form>    
+    </div>
+  </div>
+</body>
+</html>
