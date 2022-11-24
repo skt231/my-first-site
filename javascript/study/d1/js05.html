@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        자바스크립트에서 내장변수, 내장객체, 내장 함수
+        내장은 미리 전문 프로그래머가 구현해 놓은 것들은 의미한다.
+        */
+       //.tofixed() alert()
+       //window,document 내장 객체
+
+       //window 객체는 자바스크립트에서 전역을 담당하는 객체이다.
+       //도든 객체의 최상위
+        //대부분의 객체를 가지고 있어서 생략가능 하다.
+        // alert("hi");
+        // window.alert("hi");
+        window.document.write("hi");
+
+        /*
+        전역변수 : 프로그램이 실행되면 메모리에 올라가서 프로그램이 종료될떄 사라진다.
+                    모든지역에서 접근할 숭 있다.
+
+        지역변수 : 해당 영역에서만 사용할 수 있다.
+                    선언할때 메모리에 올라가서 해당 영역이 닫히면 메모리에서 사라진다.
+        */
+       //전역변수 선언하기
+       //script 안에 블럭없이 변수를 선언하면 전역변수
+       //특정영역에서 var없이 선언한 변수는 전역변수이다.
+       //var   는 함수단위로 지역을 구분한다.
+       var a=10;//전역변수
+        b=10;//전역변수//javascript에서는 var을 안써도 전역변수가 선언됨
+        {
+            var c=20;//전역변수 c선언
+            var d=30;   //전역변수 d선언
+        }
+        console.log(window.a)   //전역변수는  window. 로 출력해보면 나옴 지역변수와는 다르게
+        console.log(window.b)
+        console.log(window.c)
+        console.log(window.d)
+        //var 함수단위로만 지역변수로 취급한다.
+        //java의 변수 같은 경우는 {}블럭단위로 지역변수 취급한다.
+        //let java처럼 {}블럭단위로 지역변수 취급한다.
+
+        //함수 단위 코드
+        if(10>5){
+            var e=10;
+             f=20;
+        }
+        console.log(e);
+        console.log(f);//함수단위라 접근이 됨
+
+        if(10>5){
+            let g=70;
+            let h=40;
+                console.log(g);// 지역변수 선언이 됨
+                                //if문의 블럭 내부에서 let으로 선언된 변수는 외부에서 
+                                        //참조되지 않음을 알 수 있다.
+
+                                        
+        }//let, const는 블록 내부에서 선언된 변수까지도 지역변수로 인정하는 블록 레벨 스코프이다.(전역변수 불가능)
+        // console.log(g); //let은 지역변수만 가능해서 선언이 안됨
+        // console.log(h);
+        // console.log(window.g);
+        // console.log(window.h);
+        let l=100;
+        console.log(l); //출력 가능
+        //const 브럭단위 const상수를 저장할떄 사용
+        //var 이미 선언된 변수를 최기화 ㅎ해서 다시 선언할수 있다.
+        //let, const,java는 이미 선언된 변수를 다ㅣㅅ 선언하는 것을 허용하지 않는다.
+        const ai="hi";
+        // ai="eiwo";  //이미 위에 변수를 선언해서 에러남//상수여서 변경이 불가능 하다.
+        console.log(ai);
+        //>> const 또는 let을 사용하여 모든 지역 변수를 선언합니다.
+        // >> 변수를 재할당해야 하는 경우가 아니라면 기본적으로 const를 사용합니다. var는 사용하지 않습니다.
+        /*
+        이 두 선언 방식의 차이점은 한 가지입니다.
+        let으로 선언된 변수는 재할당이 가능한 변수이고,
+        const로 선언된 변수는 재할당이 불가능한 변수라는 점입니다.
+        */
+
+        function myFunction(){
+            var i=10;   //지역변수
+                j=20;   //전역변수  //var이 안붙으면 전역 변수임
+
+        }
+            // console.log(j);
+            // console.log(j);
+            console.log(window.i);//함수가 실행되어야 생성;//undefined
+            console.log(window.j);//함수가 실행되어야 생성;//undefined
+            myFunction();  //실행되어야 생성;
+            // console.log(i); //i가 지역변수여서 사라진다.
+            console.log(j); //j가 전역변수여서 접근 가능하다.
+            console.log(window.j);  //undifined
+            console.log(window.i);//20 전역변수
+            
+         
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
