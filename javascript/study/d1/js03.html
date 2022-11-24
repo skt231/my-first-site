@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //자료형
+        //자바 : 다양한 자료형이 존재
+        //자바스크립트 : 없지만 개발자에게 위임해서 개발자는 있어야함
+
+        //var,let,const 자료형이 없으면 전역변수이다.
+        //보통은 var가 자바스크립트의 자료형으로 이야기함//최근에는 사용하지 말것(let 이나 const를 권장)
+
+        var a;//a변수 선언
+        a=10;//a에 10을 넣는다.
+        a=12;//a의 값을 12로 변경
+        var c,d,e=10;   //여러 변수 선언하고 값을 할당하기
+        //상수 10,12와 같은 고정값들을 상수라고 한다.
+
+        //var에서 다룰수 있는 자료형태
+        //1.number 정수, 실수
+        document.write("-----------------------","<br>");
+        document.write(10,",",typeof(10),"<br>");
+        document.write(10.1,", ",typeof(10.1),"<br>");
+        var a=10;
+        document.write(a," ", typeof(a),"<br>");
+    
+        //2.boolean trun,false 1,0도 true,false로 인식
+        document.write("-----------------------","<br>");
+        document.write(true," ",typeof(true),"<br>");
+        var b=false;
+        document.write(b," ", typeof(b),"<br>");
+
+        //3.String ''나 ""를 사용하여 문자열 기술
+        document.write("-----------------------","<br>");
+        var s="문자열ㄴ";   //JS는  var변수 선언을 같은 문자로 여러개 가능하고 마지막 변수가 변수가 됨
+        s='문자열ㅇ';
+        document.write(s," ",typeof(s),"<br>");
+
+        //4.배열 자료형 array
+        document.write("-----------------------","<br>");
+        var myArray=[1,2,3];
+        document.write(myArray, " ", typeof(myArray),"<br>");
+        var myArray=new Array(5);
+        document.write(myArray," ",typeof(myArray),"<br>");
+        var myArray=[1,2,3];
+        myArray[10]=10;
+        document.write(myArray," ",typeof(myArray),"<br>");
+
+        // var myArray1;//undifined상태 //자료형이 정해지지 않은 상태//배열이 아니므로  에러
+        // myArray1[10]=10;
+        // document.write(myArray1, " ", typeof(myArray1),"<br>");
+
+        var myArray1=new Array();//배열을 선언해줘야 에러가 사라짐
+        myArray1[10]=10;
+        document.write(myArray1, " ", typeof(myArray1),"<br>");
+        
+        //자바스크립트 배열은 다양한 자료형을 넣을수 있다.
+        var myArray2=[1,"1",[1,2,3]];
+        myArray2[0];//읽어오는 방법
+        myArray2[1]; //읽어오는 데이터가 문자열1이다.
+        myArray2[2];//읽어온 데이터가 배열이다.
+        //3만 읽어올라면
+        myArray2[2][2];//3만 읽어옴
+        //2를 10으로 변경하기
+        myArray2[2][1]=10;
+        // document.write(myArray2[0], " ", typeof(myArray2[0]),"<br>");
+        // document.write(myArray2[1], " ", typeof(myArray2[1]),"<br>");
+        // document.write(myArray2[2], " ", typeof(myArray2[2]),"<br>");
+        // document.write(myArray2[2][1], " ", typeof(myArray2[2][1]),"<br>");
+
+        //5.객체 자바스크립트 객체를 json이라고 한다.//면접 기출***
+        document.write("-----------------------","<br>");
+        var myObject={};    //객체 생성
+        document.write(myObject," ",typeof(myObject),"<br>");
+        //json만드는 방법은 중괄호 안에 key:value형태로 ,로 연결하여 만든다.
+        var myperson={
+            firstName:"jone",
+            age : 40,
+            eyeColor:"blue"
+        }
+        document.write(myperson.firstName," ",myperson.age," ",myperson.eyeColor," ",
+        typeof(myperson),"<br>");
+        /*
+        myperson.age;//읽어오는 방법
+        myperson.eyeColor="red";//값을 변경하는 방법
+
+        */
+        console.log(myperson);  
+
+        myperson.lastName="ken"; //없던 변수를 추가
+        document.write(myperson.lastName," ","<br>");
+        document.write("-----------------------","<br>");
+        //6. 함수 function
+        // var myFunction=function(){
+        //     alert('hello');
+        // }
+        // document.write(myFunction,typeof(myFunction));
+        // myFunction();
+
+        //객체 안에 메스도를 변수에 담아서 넣을 수있다.
+        // myPerson.myFunction=function(){
+        //   alert('world');
+        // }
+        // myperson.myFunction();
+
+        //undifiednd와  null
+        //undifined 자료형이 결정되지 않고 값은 할당되지 않음
+        //null 자료형은 object이고 값은 할당되지않음
+
+        // var a1;
+        // document.write(a1,", ",typeof (a1), "<br>");    //undifined
+        // var b=null;
+        // document.write(b,", ",typeof b,"<br>"); //null
+        document.write("-----------------------","<br>");
+        document.write(10/6,"<br>");    //소수점이 많음
+        document.write(10/2.,"<br>");   //소수점이 적음
+        document.write("-----------------------","<br>");
+        document.write((10/6).toFixed(2),"<br>");   //소수 자리를 2자리 까지(tofixed)
+        document.write((10/2.).toFixed(2),"<br>");  //tofixed:원하는 소수점으로 고정
+        document.write("-----------------------","<br>");
+        
+
+        document.write("안\n 녕\n hello<br>");
+
+// alert("안\n 녕\n hello<br>");
+
+// alert("안녕 \" hello<br>");
+
+// alert('안녕 " hello<br>');
+
+// alert("안녕 ' hello<br>");
+
+document.write("11+22+33","<br>");//11+22+33
+
+document.write(11+22+"33","<br>");//3333
+
+document.write("11"+22+33,"<br>");//112233//"11"+22=1122"+33="112233"
+
+document.write("11"+"22"+"33","<br>");//112233
+
+document.write("11"+"22"+"33","<br>");//112233
+
+document.write(true+1,"<br>");//2   //false 0 true 1
+
+document.write(false+1,"<br>");//1   //false 0 true 1
+
+document.write(true+"1","<br>");//true1
+
+//true false개념 0이면 false 0이 아니면 true
+
+document.write(0,"<br>");//0
+
+document.write(Boolean(0),"<br>");//false
+
+document.write(!!0,"<br>");//false
+
+document.write(10,"<br>");//10
+
+document.write(Boolean(10),"<br>");//true
+
+document.write(!!10,"<br>");//true
+
+
+
+//'hi'                           //true
+
+//0, NaN, '', null , undefined   //false
+document.write("-----------------------","<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
