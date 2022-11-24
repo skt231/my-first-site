@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var name1=new Array(10);
+        var name1=[];
+name1.push("짱아");
+name1.push("짱구"); 
+name1.push("철수");
+name1.push("영이");
+name1.push("훈이");
+for(let i=0;i<name1.length;i++){
+    document.write(name1[i]+"<br>");
+}
+// console.log(name1[1]);
+// for(var i=0;i<5;i++){
+//     document.write(+"님 안녕하세요. 자바스크립트 동네에 오신것을 환영합니다.","<br>");
+// }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
