@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/myalert.js"></script>
+    <script>
+        //자바스크립트는 ;를 생략할수 있다.
+
+        //js작성 위치
+        //1.인라인형
+        //2.내장형
+        //3.외장형(권장)
+        alert("내장형")
+        function myfunction(){
+            document.write("함수호출");
+        }
+        myfunction();
+    </script>
+</head>
+<body>
+    <!-- 1. -->
+    <button onclick="alert('인라인')">클릭</button>
+    <button onclick='alert("인라인")'>클릭</button>
+    <!-- html,javascript, 최근나온언어는 '' ""를 같은 것으로 봄
+        자바는 다른것으로 봄 문자 문자열
+        인라인형은 쓰지말것 권장
+     -->
+     <button onclick='myfunction()'>클릭</button>
+</body>
+</html>
