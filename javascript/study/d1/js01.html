@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js01</title>
+    <script>
+        // /* */ : Js의 주석
+           /*  웹 3총사
+           html : 구조와 내용
+           css : 스타일
+           javascript : 프로그램을 담당 및 동적인 화면
+   
+           웹개발자라면 반드시 3가지를 알고 있어야 한다.
+   
+           javascript를 이용하는 화면 출력하는 3가지 방법
+   
+           */
+           document.write("hello world");
+   
+           /*
+           테스트용으로 사용해야한다. 화면이 전부 불여진 다음에 호출하면 화면을 지우고 찍는다.
+           */
+          alert("hello world");
+          /*
+          사용하지 말것 권장
+          */
+         console.log("hello world"); 
+         /*
+         디버그창에 실행
+         권장을 하지만 적당히 섞어서 쓰기
+         객체를 출력하면 객체의 내용을 확인 할수 있다.
+         */
+       </script>    
+</head>
+<body>
+<div id="hello"></div>
+<script>// javascript는 header에 기술할 것을 권장한다.
+    document.getElementById("hello").innerHTML="hello world";
+</script>    
+
+</body>
+</html>
