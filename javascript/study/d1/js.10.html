@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+
+//1.홀수,짝수를 출력 2.두 수중 큰수 출력
+// var number=prompt("숫자는?","여기입력");//1-1)
+// alert(`당신이 선택한 숫자는 ${number}입니다.`);
+// if(number%2==0){
+//     alert("짝수입니다.")
+// }else if(number%2==1){
+//     alert("홀수입니다.")
+// }else{
+//     altert("0입니다.")
+// }
+
+// var result=Number(prompt("수입력>"));    //1-2)
+// result=result%2==0 ? "짝수" : "홀수" ;
+// alert(result);
+
+//2.두 수중 큰 수 출력  // 2-1)
+// var num1=prompt("첫번쨰 숫자는?");
+// var num2=prompt("두번쨰 숫자는?");
+// if(num1>num2){
+//     alert(`${num1}이 큰수 입니다.`);
+// }else if(num1<num2){
+//     alert(`${num2}가 큰수 입니다.`);
+// }else{
+//     alert("같은 수입니다.");
+// }
+
+// var numb1=Number(prompt("첫번째 숫자는?"));  //2-2)
+// var numb2=Number(prompt("두번쨰 숫자는?"));
+// result= numb1>numb2 ? "numb1이 큰수입니다." : numb1<numb2 ? "numb2이 큰수입니다." : "같은수 입니다.";
+// alert(result);
+
+//3.사용자에게 숫자를 입력받아 입력받은 수가 100보다 큰지 작은지 출력
+// var num3=prompt("숫자 입력:");
+// if(num3>100){
+//     if(num3%3==0){
+//     document.write(`${num3}는 100보다 큰수이고 3의 배수 입니다.`);
+// }else{
+//     document.write(`${num3}는 100보다 큰수이고 3의 배수r가 아닙니다.`);
+// }
+// } else if(num3<100){
+//     if(num3%2==0){
+//         document.write(`${num3}는 100보다 작은수 이고 짝수입니다.`);
+//     }else{
+//         document.write(`${num3}는 100보다 작은수이고 홀수입니다.`)
+//     }
+// }else{
+//     document.write(`${num3}는 100입니다.`);
+// }
+
+//4.현재시간이 새벽,아침, 점심,저녁 중 언제인지 확인하시오(시간대는 24시간을 4로 나눠 표시)
+//0~4, 4~8, 8~12, 12~16, 16~20, 20~24
+// var Hours=new Date().getHours();
+// var time;
+// var input=Math.floor(Hours/6);
+// switch(input){
+//     case 0:     
+//         time="새벽";
+//         break;
+//     case 1: 
+//         time="아침";
+//         break;
+//     case 2: 
+//         time="점심";
+//         break;
+//     case 3: 
+//         time="저녁";
+//         default:
+//             document.write("잘못된 입력입니다.");
+// }
+// document.write(`현재 ${Hours}시이고 ${time} 입니다.`);
+
+//5.4~8까지 모든 수를 더하는 반복문 3가지
+// var sum=0;
+//1)
+// for(let i=0;i<5;i++){
+//     sum+=i+4;
+// }
+// document.write(`4~8사이의 숫자 합은${sum}입니다.`);
+
+//2)
+// var i=0;
+// while(i<5){
+//     sum+=i+4;
+//     i++;
+// }
+// document.write(`4~8사이의 숫자 합은${sum}입니다.`);
+
+//3)
+// var ofnum=[4,5,6,7,8];
+// var ofvalue=0;
+// for(let i of ofnum){
+//     ofvalue+=i;
+// }
+// document.write(`4 ~ 8 사이의 숫자 합은 ${ofvalue}입니다.`);
+
+// 4)
+// var innum=[4,5,6,7,8];
+// var invalue=0;
+// for(let x in innum){
+//     invalue+=innum[x];
+// }
+// document.write(`4 ~ 8 사이의 숫자 합은 ${invalue}입니다.`);
+
+//6. 100이하 3이나 4의 배수합을 구하시오
+// var sum1=0;
+// for(let i=0;i<100;i++){
+//         if((i+1) %3==0 || (i+1)%4==0){
+//             sum1 += (i+1);
+//         }
+// }
+// document.write(`100이하면서 3이나 4의 배수 합은 ${sum1}입니다.`);
+
+//7. 100이하의 4와 5의 공배수
+// var sum2=0;
+// for(let i=0;i<100;i++){
+//         if((i+1) %4==0 && (i+1)%5==0){
+//             sum2 += (i+1);
+//         }
+// }
+// document.write(`100이하면서 3이나 4의 배수 합은 ${sum2}입니다.`);
+
+
+</script>
+</head>
+<body>
+
+
+    
+    </body>
+    </html>
