@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <HTML>
+        <HEAD>
+            <TITLE>이벤트와 이벤트 핸들러 연습/롤오버 이미지</TITLE>
+            <script>
+                window.onload=function(){
+                var img2=document.getElementById("img/img2");
+                img2.onmouseover=function(){
+//document.images.img2.src='2.gif'
+img2.src='2.gif';
+}
+                img2.onmouseout=function(){
+                //document.images.img2.src='1.gif'
+                img2.src='img/1.gif';
+                }
+            }
+            </script>
+        </HEAD >
+        <body>
+           
+         <!-- <BODY onLoad="alert('환영합니다. 어서오십시오')"	   
+        // onResize="alert('창 크기가 변하였습니다.')"
+        // onKeypress="alert('키를 눌렀습니다.')"
+        // <CENTER><H3> 여기는 자바스크립트 연구실입니다. </H3></CENTER> -->   
+          <!-- //2) -->
+         <!-- <body bgcolor="pink">
+            // <Table border="0">
+            //     <tr>
+            //         <td>메시지가 왔습니다....</td><br><br>
+            //         <a href="#" onmouseover="document.imgages.img1.src='img/2.gif'";
+            //         onmouseout ="document.images.img1.src='img/1.gif'">
+            //             <img src="img/1.gif" id=img1 border=0>
+            //             </a> <br><br>
+            //             07     마우스를 올려보세요~
+            //             08 </td></tr>
+            //             09 </TABLE></BODY></HTML>
+                        
+            //     </tr>
+            // </Table> -->
+            <!-- //     3 -->
+            <!-- //     <textarea onkeydown="alert('keyDown:'+String.fromCharCode(event.keyCode))" 
+            //         onkeypress="alert('keyPress:'+String.fromCharCode(event.keyCode))" 
+            //         onKeyup="alert('keyUp:'+String.fromCharCode(event.keyCode))"></textarea> -->
+
+            <a href="http://www.daum.net">
+<img src="img/1.gif" id="img1" border="5"
+onmouseover="document.images.img1.src='img/2.gif'"
+onmouseout="document.images.img1.src='img/1.gif'"/>
+</a>
+<a href="http://www.daum.net">
+<img src="img/1.gif" id="img/img2" border="5"/>
+</a>
+         </BODY>
+        </body>
+    </HTML>
