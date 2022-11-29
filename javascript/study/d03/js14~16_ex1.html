@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #vM {
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        tr,
+        td {
+            padding: 10px 20px;
+            border: 0px solid #000;
+
+        }
+
+        #top {
+            width: auto;
+            height: 70px;
+            font-size: 30px;
+            text-align: center;
+            background-color: red;
+
+
+        }
+
+        #side {
+            width: 80px;
+            background-color: blue;
+            color: white;
+
+        }
+
+        #bottom {
+            height: 90px;
+        }
+
+        #hole {
+            background-color: rgba(1, 255, 107, 0.89);
+        }
+
+        #exprice {
+            background-color: rgb(255, 0, 0);
+            color:azure;
+        }
+
+        #bezone {
+            background-color: blanchedalmond;
+        }
+
+        #przone {
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        var price = 0;
+        var summoney = 0;
+        var inputmoney = 0;
+        window.onload = function () {
+            document.getElementById('bevbt1').onclick = addprice1;
+            document.getElementById('bevbt2').onclick = addprice2;
+            document.getElementById('bevbt3').onclick = addprice3;
+            document.getElementById('bevbt4').onclick = addprice4;
+            document.getElementById('bevbt5').onclick = addprice5;
+            document.getElementById('bevbt6').onclick = addprice6;
+            document.getElementById('add').onclick = calcualation;
+            document.getElementById('resetbt').onclick = reset;
+            document.getElementById('payment').onclick = pay;
+            document.getElementById('add1000').onclick = add1000;
+            document.getElementById('add500').onclick = add500;
+            document.getElementById('add100').onclick = add100;
+            document.getElementById('resetinput').onclick = resetinputmoney;
+
+        }
+        //가격 가져오기
+        function addprice1() {
+            var input = document.getElementById("bevbt1").innerText;
+            document.getElementById("text1").value = input;
+        }
+        function addprice2() {
+            var input = document.getElementById("bevbt2").innerText;
+            document.getElementById("text1").value = input;
+        }
+        function addprice3() {
+            var input = document.getElementById("bevbt3").innerText;
+            document.getElementById("text1").value = input;
+        }
+        function addprice4() {
+            var input = document.getElementById("bevbt4").innerText;
+            document.getElementById("text1").value = input;
+        }
+        function addprice5() {
+            var input = document.getElementById("bevbt5").innerText;
+            document.getElementById("text1").value = input;
+        }
+        function addprice6() {
+            var input = document.getElementById("bevbt6").innerText;
+            document.getElementById("text1").value = input;
+        }
+        //계산
+        function calcualation() {
+            document.getElementById('add').addEventListener('click', function () {
+                price += + document.getElementById('text1').value;
+                price.innerText += price.innerText;
+                document.getElementById("summ").innerHTML = "총액은 " + price + "원 입니다."
+
+            })
+        }
+        function reset() {
+            price = 0;
+            document.getElementById("summ").innerHTML = "총액은 " + price + "원 입니다.";
+        }
+
+        function add1000() {
+            inputmoney = inputmoney + 1000;
+            document.getElementById("inputmoney").value = inputmoney + '원';
+        }
+        function add500() {
+            inputmoney = inputmoney + 500;
+            document.getElementById("inputmoney").value = inputmoney + '원';
+        }
+        function add100() {
+            inputmoney = inputmoney + 100;
+            document.getElementById("inputmoney").value = inputmoney + '원';
+        }
+        function pay() {
+            if (inputmoney - price > 0) {
+                var ex500 = parseInt(inputmoney / 500);
+                var ex100 = parseInt((inputmoney % 500) / 100);
+                document.getElementById('ex500').value = ex500 + '개';
+                document.getElementById('ex100').value = ex100 + '개';
+                inputmoney = 0;
+                document.getElementById("inputmoney").value = inputmoney + '원';
+            } else if (inputmoney - price == 0) {
+                alter('결제되었습니다.');
+            } else {
+                alert('잔액이 부족합니다.');
+            }
+        }
+        function resetinputmoney() {
+            inputmoney = 0;
+            document.getElementById("inputmoney").value = inputmoney + '원';
+        }
+
+    </script>
+</head>
+
+<body>
+    <table id="VM">
+        <tr id="top">
+            <td colspan="4">자판기</td>
+        </tr>
+        <tr id="bezone">
+            <td><img src="img/bev1.jpg"></td>
+            <td><img src="img/bev2.jpg"></td>
+            <td><img src="img/bev3.jpg"></td>
+            <td id="side" rowspan="2">
+                <p>결제금액</p>
+                <input type="text" id="text1"><br><br>
+                <button id="add">추가</button>
+                <button id="resetbt">초기화</button>
+                <div id="summ"></div>
+            </td>
+        </tr>
+        <tr id="przone">
+            <td id="bev1"><button id="bevbt1">1000</button>원</td>
+            <td id="bev2"><button id="bevbt2">1500</button>원</td>
+            <td id="bev3"><button id="bevbt3">600</button>원</td>
+        </tr>
+        <tr id="bezone">
+            <td><img src="img/bev4.jpg"></td>
+            <td><img src="img/bev5.jpg"></td>
+            <td><img src="img/bev6.jpg"></td>
+            <td id="side" rowspan="2">
+                <button id="add1000">1000원</button>
+                <button id="add500">500원</button>
+                <button id="add100">100원</button>
+                <br><br>
+                <input style="width: 100px; text-align: center;" type="text" value="투입 금액" id="inputmoney"> <br>
+                <br>
+                <button id="payment">결제</button>
+                <button id="resetinput">초기화</button>
+            </td>
+        </tr>
+        <tr id="przone">
+            <td id="bev4"><button id="bevbt4">1300</button>원</td>
+            <td id="bev5"><button id="bevbt5">900</button>원</td>
+            <td id="bev6"><button id="bevbt6">1200</button>원</td>
+        </tr>
+        <tr id="bottom">
+            <td colspan="3" id="hole"></td>
+            <td id="exprice">
+                <div>
+                    <p>500원</p>
+                    <input type="text" id="ex500"><br>
+                    <p>1000원</p>
+                    <input type="text" id="ex1000"><br>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
