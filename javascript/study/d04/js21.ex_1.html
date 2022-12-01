@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var time1Id;
+            var myButton=document.getElementsByTagName('button');
+            myButton[0].onclick=function(){
+                time1Id=setInterval(function(){
+                    document.getElementById("timezone").innerHTML=new Date();
+                },1000);
+            };
+                    // setTimeout(function(){
+        // document.getElementById("console").innerHTML=new Date();
+        // },3000);
+            // myButton[1].onclick=function(){
+            //     clearInterval(time1Id);
+            // }
+           myButton[1].addEventListener("click",function(){
+            clearInterval(time1Id);
+           });
+        }
+    </script>
+</head>
+<body>
+    <div id="console">
+        <p id="timezone"></p>
+        <button>시작</button>
+        <button>멈춤</button>
+    </div>
+</body>
+</html>
