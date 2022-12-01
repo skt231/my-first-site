@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말 달리자</title>
+</head>
+<style>
+    #start {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #line {
+        width: 800px;
+
+        border-right: solid 2px black;
+    }
+    #box{
+        width: 1280px;
+        height: 900px;
+    }
+</style>
+
+<script>
+    var rank = [];
+    function start() {
+        rank = [];
+        // rank 초기화
+        document.getElementById("rank1").innerHTML = "";
+        document.getElementById("rank2").innerHTML = "";
+        document.getElementById("rank3").innerHTML = "";
+        document.getElementById("rank4").innerHTML = "";
+        
+        // 경기 시작 시 start 버튼 제거
+        document.getElementById("start").style.display = 'none';
+
+        // 말 위치 초기화
+        document.getElementById("h1").style.marginLeft = '0px';
+        document.getElementById("h2").style.marginLeft = '0px';
+        document.getElementById("h3").style.marginLeft = '0px';
+        document.getElementById("h4").style.marginLeft = '0px';
+
+        // gaming펑션을 100ms마다 실행
+        timerId = setInterval(gaming, 100);
+    }
+    function gaming() {
+        // 말을 0~50만큼 랜덤으로 이동
+        document.getElementById("h1").style.marginLeft =
+            parseInt(document.getElementById("h1").style.marginLeft) + parseInt(Math.random() * 50) + 'px';
+        document.getElementById("h2").style.marginLeft =
+            parseInt(document.getElementById("h2").style.marginLeft) + parseInt(Math.random() * 50) + 'px';
+        document.getElementById("h3").style.marginLeft =
+            parseInt(document.getElementById("h3").style.marginLeft) + parseInt(Math.random() * 50) + 'px';
+        document.getElementById("h4").style.marginLeft =
+            parseInt(document.getElementById("h4").style.marginLeft) + parseInt(Math.random() * 50) + 'px';
+
+        // rank 체크
+        // .push() = java ArrayList.add();
+        if (parseInt(document.getElementById("h1").style.marginLeft) > 800) {
+            document.getElementById("h1").style.marginLeft = '810px';
+            if (!rank.includes(1)) {
+                rank.push(1);
+            }
+        }
+        if (parseInt(document.getElementById("h2").style.marginLeft) > 800) {
+            document.getElementById("h2").style.marginLeft = '810px';
+            if (!rank.includes(2)) {
+                rank.push(2);
+            }
+        }
+        if (parseInt(document.getElementById("h3").style.marginLeft) > 800) {
+            document.getElementById("h3").style.marginLeft = '810px';
+            if (!rank.includes(3)) {
+                rank.push(3);
+            }
+        }
+        if (parseInt(document.getElementById("h4").style.marginLeft) > 800) {
+            document.getElementById("h4").style.marginLeft = '810px';
+            if (!rank.includes(4)) {
+                rank.push(4);
+            }
+        }
+
+        // 모든 말이 결승점에 도달 했을 때
+        // clearInterval(timerId)로 종료
+        if (parseInt(document.getElementById("h1").style.marginLeft) > 800 &&
+            parseInt(document.getElementById("h2").style.marginLeft) > 800 &&
+            parseInt(document.getElementById("h3").style.marginLeft) > 800 &&
+            parseInt(document.getElementById("h4").style.marginLeft) > 800
+        ) {
+            clearInterval(timerId);
+            // rank[0]~rank[3]이 순위 이므로 html로 리턴하여 몇번 말이 이겼는지 출력
+            document.getElementById("rank1").innerHTML =rank[0] +"번 말 🎉";
+            document.getElementById("rank2").innerHTML = rank[1] +"번 말";
+            document.getElementById("rank3").innerHTML = rank[2] +"번 말";
+            document.getElementById("rank4").innerHTML = rank[3] +"번 말";
+            // 게임 시작 할 때 지워놨던(none) start버튼 inline으로 다시 생성
+            document.getElementById("start").style.display = 'inline';
+        }
+    }
+</script>
+
+<body>
+
+    <div id="box">
+    <!-- buuton -->
+    <button onclick="start()" id=start>START</button><br>
+    <!-- 경기 진행 화면 -->
+    <div id="line">
+        <hr>
+        <img src="img/h.gif" id="h1" width=80 height=80><br>
+        <hr>
+        <img src="img/h.gif" id="h2" width=80 height=80><br>
+        <hr>
+        <img src="img/h.gif" id="h3" width=80 height=80><br>
+        <hr>
+        <img src="img/h.gif" id="h4" width=80 height=80><br>
+        <hr>
+    </div>
+    <!-- 경기 종료 후 rank 출력 화면 -->
+    <div id="rank">
+        1등 : <b><span id="rank1"></b></span><br>
+        2등 : <span id="rank2"></span><br>
+        3등 : <span id="rank3"></span><br>
+        4등 : <span id="rank4"></span><br>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var timer1Id;
+            var myButton=document.getElementsByClassName("button"); //array
+            myButton[0].onclick=function(){
+                
+                timer1Id=setInterval(function(){
+                    document.getElementById("console").innerHTML=new Date();
+                },1000);
+            };
+            // myButton[0].addEventListener("click",function(){
+            //     document.getElementById("console").innerHTML=new Date();
+            // },1000);
+            myButton[1].addEventListener('click',function(){
+                clearInterval(timer1Id);
+            });
+        };
+    
+        // setTimeout(function(){
+        // document.getElementById("console").innerHTML=new Date();
+        // },3000);
+
+        setInterval(function(){
+            document.getElementById("console").innerHTML=new Date();
+        },1000);
+
+        
+    </script>
+</head>
+<body>
+    <button >시작</button>
+    <button >멈춤</button>
+    <div id="console"></div>
+</body>
+</html>
