@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(new Date());
+        console.log(new Date(0));
+        console.log(new Date(2000,0,1,2,3,4));//Sat Jan 01 2000 02:03:04 GMT+0900 (한국 표준시)
+                                        //(연도,월,일,시간,분,초)
+        console.log(new Date().getTime());//gettime() :1970년 1월 1일 00:00:00 UTC와 현재 고대 사이의 경과 시간(밀리 초)을 대표하는 숫자입니다.
+
+        var a=new Date(2015,1,2,3,4,5);
+        var b=new Date(2.16,2,3,4,5,6);
+        var diff=b.getTime()-a.getTime();
+
+        console.log(diff);;
+        var sec=diff/1000;  //초를 구하는 방법(밀리/1000)
+        // var min=sec(diff/1000)/60; //분을 구하는 방법  (초/60)
+        var min=diff/(1000*60);
+        // var hour=((diff/1000)/60)/60;    //시간을 구하는 방법    (분/60)
+        var hour=diff/(1000*60*60);
+        // var date= ((diff/1000)/60)/60/24
+        var date=diff/(1000*60*60*24);
+
+        //년월일은 처리불가(기준 불명확)
+
+        window.onload=function(){
+            document.getElementById('btn').onclick=function(){
+                console.log(document.getElementById('pDate1').value);
+                console.log(document.getElementById('pDate2').value);
+                
+                var a= new Date(document.getElementById('pDate1').value);//시간 객체로 만들어줌(Date)
+                var b= new Date(document.getElementById('pDate2').value);
+                console.log(a);
+                console.log(b);
+                console.log(a.getTime());
+            }
+        }
+//시분토 get time
+//일년 getfullyear()-getfullyear()
+        //http://ko-ko.tistory.com/17
+        //일,월에는 문제가 발생한다.
+        b.setSeconds(b.getSeconds()-a.getSeconds());
+        b.setMinutes(b.getminutes()-a.getMinutes());
+        b.setHours(b.getHours()-a.getHours());
+        b.setDate(b.getDate()-a.getDate());
+        b.setMonth(b.getMonth()-a.getMonth());
+        b.setFullYear(b.getFullYear()-a.getFullYear());
+ 
+    </script>
+</head>
+    <button id="btn">클릭</button>
+    <input type="date" id="pDate1">
+    <input type="dateTime-local" id="pDate2">
+</body>
+</html>

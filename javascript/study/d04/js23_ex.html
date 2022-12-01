@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc방 시간 프로그램</title>
+    <script>
+        function diffday(d1, d2) {
+var t2 = d2.getTime();
+console.log("t2 : "+t2);
+var t1 = d1.getTime();
+console.log("t1 : "+t1);
+return Math.floor((t2-t1)/(24*3600*1000));
+}
+
+        window.onload = function () {
+            document.getElementById("exchangebt").addEventListener("click",function(){
+                var now= new Date();
+                var buyDate=new Date(document.getElementById("buyDate").value);
+                // console.log(now);
+                var exAblebDate=diffday(buyDate,now);
+                // alert(exAblebDate);
+                if(exAblebDate>2){  //2일 남으면 환불 불가
+                    alert(exAblebDate);
+                    alert("환불 불가 합니다.");
+                }else{
+                    alert(exAblebDate);
+                    alert("환불 가능 합니다.");
+                }
+            })
+        
+
+            document.getElementById("pTimebt").addEventListener("click", function () {
+                fTime = new Date(document.getElementById("fTime").value);
+                sTime = new Date(document.getElementById("sTime").value);
+                var payForHour = Number(document.getElementById("payForHour").value);
+                var diff = fTime.getTime() - sTime.getTime();
+                var pHour = diff / (1000 * 60 * 60);
+                var pay = pHour * payForHour;
+                if(pay<0){
+                alert("다시 입력하세요");
+            }else{
+                alert("지불할 금액은 "+pay+" 원 입니다.");
+            }
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>반품가능 여부 구매한 시간
+        <input type="datetime-local" id="buyDate">
+        <button id="exchangebt">확인</button>
+    </div>
+
+    <div>
+        <h2>pc방 요금 계산<br></h2>
+        <p id="pFH">시간당요금 <input type="text" id="payForHour" value="1000">
+            시작시간<input type="datetime-local" id="sTime">
+            종료시간 <input type="datetime-local" id="fTime">
+            <button id="pTimebt">계산</button>
+        </p>
+
+    </div>
+</body>
+
+</html>
