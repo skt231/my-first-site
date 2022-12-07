@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var dan = 0;
+        var a=0;
+        window.onload=function(){
+            p99d(3);
+    }
+    function p99d(dan) {
+            
+            for (var i = 0; i < 9; i++) {
+                var text="";
+                a+=1;
+                // console.log(dan*a);
+                text+=dan+" * "+a+" = "+ dan * a+" <br> ";
+                 document.getElementById("console").write =text;
+                // alert(text);
+            }
+            document.getElementById("console").innerText =text;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="console">
+
+    </div>
+</body>
+
+</html>
