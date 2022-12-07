@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤색깔바꾸기</title>
+    <style>
+        #start {
+            position: absolute;
+            margin: 40px;
+            padding: 40px;
+        }
+
+        #stop {
+            position: absolute;
+            margin: 40px;
+            margin-left: 160px;
+            padding: 40px;
+            
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#start").on("click", function () {
+                var timer = setInterval(function () {
+                    var color = Math.random() * 0xffffff;
+                    var size = Math.random() * 400;
+                    color = parseInt(color);
+                    color = color.toString(16);
+                    size = parseInt(size);
+                    $("body").css("background-color", "#" + color);
+                    $("#console").css("font-size", size);
+
+
+                }, 100);
+                $("#stop").on("click", function () {
+                    clearInterval(timer)
+                })
+            });
+        }
+        )
+    </script>
+</head>
+
+<body>
+    <div id="console">
+
+    </div>
+    <div>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+</body>
+
+</html>
