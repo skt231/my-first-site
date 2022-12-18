@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+    <link rel="stylesheet" href="mys.css">
+    <style>
+.infor_field{
+    padding: 200px 0px;  
+  position: relative; 
+  ;
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form class="login">
+          <div class="login__field">
+            <div class="infor_field">
+                <form action="login.html" method="get" style ="background-color: rgb(255, 255, 255);"> <!--get 방식 post방식-->
+                  <h3>아이디 찾기</h3><br>
+              
+                      이름 : <input type="text" name="name" required maxlength="12"  /><br />
+                      <label for="email">이메일 주소 :
+                        <input type="text" id="email_id" class="form_w200" value="" title="이메일 아이디" placeholder="이메일 아이디" 
+                        required maxlength="18" pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" />
+                      </label>    
+                      <br>
+                      <a href="login.html"><button onclick="alert('찾았습니다.')">찾기</button></a>
+                      <!-- <a href="login.html"> <input type="button" value="찾기" alt="찾기버튼" onclick="alert(찾았습니다.)"/></a> -->
+                      <a href="login.html"> <input type="button" value="로그인 페이지로" alt="돌아가기 버튼"/></a>
+                                           
+              
+                  </form>
+              </div>
+           
+          </div>
+
+        </form>
+
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>    
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+        
+      </div >
+      
+    
+    </div>
+    
+        </form>    
+    </div>
+  </div>
+</body>
+</html>
