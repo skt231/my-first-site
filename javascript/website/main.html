@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mys_main.css">
+    <script>
+        $(function () {
+            var $aside = $('aside'),
+                $button = $aside.find('button'),
+                $duration=300;
+                //버튼을 클릭하면 aside가 나오도록
+                //선택자.classList.add='open';
+                //선택자.add('b'); 선택자에 b요소 추가
+                //선택자.removerClass('b'); 선택자에 b요소 제거
+                //선택자.toggleClass('b'); 
+                //A.hasClass('b') 조건문에서만 사용  a요소에 b라는 클래스 
+                // 있으면 true, 없으면 false
+
+                //속성 변경하기, 속성 값을 반환하기
+                //var c = A.attr('b')=a라는 요소에 b라는 속성의 값을 변수명 c에 저장 
+                //A.attr('b','c') a라는 요소의 b라는 속성의 값을 c로 변경
+                $button.click(function(){
+                    $aside.toggleClass('open');
+                    // $aside.stop().animate({left:'0px'},$duration);
+                    if($aside.hasClass('open')){
+                        $aside.stop().animate({left:'0px'},$duration,'easeOutBack');
+                        $button.find('img').attr('src','img/close.jpg');
+                    }else{
+                        $aside.stop().animate({left:'-350px'},$duration,'easeInBack');
+                        $button.find('img').attr('src','img/open.jpg');
+                    }
+                });
+            });
+                
+    
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="menu">
+                <aside>
+                    <ul>
+                        <li><a href="#">d</a></li>
+                        <li><a href="#">d</a></li>
+                        <li><a href="#">d</a></li>
+                    </ul>
+                    <button><img src="img/open.jpg" alt=""></button>
+                </aside>
+            </div>
+            <div class="screen__content">
+                <form class="">
+                    <div class="">
+
+
+
+
+
+                    </div>
+                    <div class="screen__background">
+                        <span class="screen__background__shape screen__background__shape4"></span>
+                        <span class="screen__background__shape screen__background__shape3"></span>
+                        <span class="screen__background__shape screen__background__shape2"></span>
+                        <span class="screen__background__shape screen__background__shape1"></span>
+
+                    </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
