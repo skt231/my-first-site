@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family: Raleway, sans-serif;
+}
+body {
+  background: linear-gradient(90deg, #464545, #424242);   
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.screen {   
+  background: linear-gradient(90deg, #b1b0b8, #f7f3f3);   
+  position: relative; 
+  height: 650px;
+  width: 1200px;
+  border-radius: 20px; 
+  box-shadow: 0px 0px 24px #7e71f3;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative; 
+  height: 100%;
+}
+
+.screen__background {   
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);  
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 500px;
+  width: 520px;
+  background: rgb(255, 255, 255); 
+  top: -50px;
+  right: 120px; 
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 205px;
+  background: #ffffff;  
+  top: -172px;
+  right: 0; 
+  border-radius: 32px;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #ffffff, #fffefe);
+  top: -24px;
+  right: 0; 
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: #ffffff;  
+  top: 420px;
+  right: 50px;  
+  border-radius: 60px;
+}
+.menu>aside{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 350px;
+  height: 100%;
+  top:0;
+  left:-350px;
+  position:fixed;
+}
+.menu>aside ul{
+  margin:0;
+  padding:0;
+  top:50px;
+  left:114px;
+  position:absolute;
+}
+.menu>aside ul{
+  margin:0;
+  padding:0;
+  top:50px;
+  left:114px;
+  position:absolute;
+}
+.menu>aside li{
+  margin:0 0 20px;
+  list-style: none;
+}
+.menu>aside button{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  position: absolute;
+  top:150px;
+  left:350px; 
+  width:52px;
+  height:132px;
+  margin:0;
+  padding:0;
+  border:none;
+}
